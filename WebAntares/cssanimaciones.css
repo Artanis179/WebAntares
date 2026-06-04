@@ -1,0 +1,26 @@
+.anim-izquierda {
+  opacity: 0;
+  transform: translateX(-120px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+ 
+.anim-derecha {
+  opacity: 0;
+  transform: translateX(120px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+ 
+.anim-zoom {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s;
+  /* el pequeño delay hace que el del centro llegue ligeramente después */
+}
+ 
+/* Estado final — cuando entran en pantalla */
+.anim-izquierda.visible,
+.anim-derecha.visible,
+.anim-zoom.visible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
